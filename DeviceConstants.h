@@ -15,10 +15,10 @@ static const char* ssid = "Der Gerät";
 static const char* password = "12345678!";
 
 // Beacon RSSI Threshold
-static const int RSSI_THRESHOLD = -70;
+static const int RSSI_THRESHOLD = -50;
+
+static const uint32_t SCAN_TIME = 40;  //50 Sekunden
+
+static const long int TENANT_ID = 145;
 
 
-static const long int TENANT_ID = 19;
-
-// Time interval for posting data to the server (in milliseconds)
-static const int POST_INTERVAL = 30000;

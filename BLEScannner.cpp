@@ -7,7 +7,6 @@
 #include "DeviceConstants.h"
 
 
-const uint32_t SCAN_TIME = 30;  //30 Sekunden
 
 BLEScan* pBLEScan;
 std::vector<String> macList;

@@ -144,7 +144,7 @@ void initGps() {
     */
 
   // minInterval = 1000,minDistance = 0,accuracy = 0
-  modem.sendAT("+SGNSCMD=2,1000,0,0");
+  modem.sendAT("+SGNSCMD=2,1000,0,3");
   modem.waitResponse();
 
   // Turn off GNSS.
