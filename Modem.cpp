@@ -1,5 +1,3 @@
-#include "esp32-hal.h"
-#include "WString.h"
 /**
  * @file      MinimalModemNBIOTExample.ino
  * @author    Lewis He (lewishe@outlook.com)
@@ -127,7 +125,7 @@ void initGps() {
   delay(500);
 
   //GNSS Work Mode Set GPS+BEIDOU
-  modem.sendAT("+CGNSMOD=1,1,0,0,0");
+  modem.sendAT("+CGNSMOD=1,1,1,0,0");
   modem.waitResponse();
 
   /*
@@ -144,7 +142,7 @@ void initGps() {
     */
 
   // minInterval = 1000,minDistance = 0,accuracy = 0
-  modem.sendAT("+SGNSCMD=2,1000,0,3");
+  modem.sendAT("+SGNSCMD=2,10000,0,1");
   modem.waitResponse();
 
   // Turn off GNSS.
